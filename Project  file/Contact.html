@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with CASE ME for inquiries, feedback, or support.">
+    <meta name="author" content="CASE ME">
+    <meta name="keywords" content="contact, CASE ME, support">
+    <title>Contact Us - CASE ME</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+      <!--fonts -->
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Danfo&family=Gloria+Hallelujah&family=Shadows+Into+Light&family=Sofadi+One&display=swap" rel="stylesheet">
+  
+  
+</head>
+<body>
+    <main>
+        <!-- Header Section -->
+        <header>
+            <div class="header-container">
+                <div class="logo">CASE ME</div>
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html">Product</a>
+                    <a href="About.html">About Us</a>
+                    <a href="Contact.html">Contact</a>
+                </nav>
+                <div class="Login-button">
+                    <a href="login.html">
+                        <svg class="login-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+                            <rect class="login-svg-bg" x="0" y="0" width="200" height="50" rx="25" />
+                            <text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" font-size="18" font-weight="bold" fill="white">Login / Sign-up</text>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+       
+
+        <!-- Contact Form Section -->
+        <section class="contact-section">
+            <div class="contact-background-img "></div>
+            <div class="contact-heading">
+                <h1>Need Any Help?</h1>
+            </div>
+            <div class="contact-info">
+                <p>We are here to assist you. Please reach out to us by email, phone, or by using the inquiry form below.</p>
+                <ul class="contact-details">
+                    <li><strong>Email:</strong> support@caseme.com</li>
+                    <li><strong>Phone:</strong> +1 (800) 555-CASE</li>
+                    <li><strong>Office Address:</strong> 123 Designer Lane, Orillia, ON, Canada</li>
+                </ul>
+            </div>
+
+            <div class="contact-form-container">
+                <form class="contact-form" action="submit_form.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inquiry-type">Inquiry Type:</label>
+                        <select id="inquiry-type" name="inquiry-type">
+                            <option value="feedback">Feedback</option>
+                            <option value="support">Support</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Inquiry</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-branding">
+                <h2>CASE ME</h2>
+                <p>Premium phone cases designed with precision, elegance, and protection in mind.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>At CASE ME, we are passionate about creating products that combine durability, artistry, and innovation.</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Pinterest</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 CASE ME. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

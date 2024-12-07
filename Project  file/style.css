@@ -1,0 +1,880 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+}
+
+/* Fixed Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 5rem; 
+}
+
+/* Header Container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-family: "Danfo", serif;
+    font-size: 3rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #e09e77, #fc4e03);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Navigation bar */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fc4e03;
+}
+/* Login Button Styles */
+.login-button-svg {
+    cursor: pointer;
+    transition: transform 0.2s ease; 
+}
+
+.login-svg-bg {
+    fill: #fc4e03; 
+    transition: fill 0.3s ease; 
+}
+
+/* Hover Effect */
+.login-button-svg:hover .login-svg-bg {
+    fill: #e03a00;
+    transform: scale(1.05); 
+}
+
+/* Focus Effect */
+.login-button-svg:focus .login-svg-bg {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(252, 78, 3, 0.5); 
+}
+
+
+/* Section Container */
+.section-container {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+/* Apply Oswald font and general text styling */
+.company-description {
+    font-family: "Oswald", sans-serif; 
+    font-size: 1.5rem; 
+    color: #333; 
+    line-height: 1.6; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    text-align: left; 
+    opacity: 0; 
+    transform: translateY(20px); 
+}
+
+/* Fade-in animation */
+.fade-in {
+    animation: fadeIn 1s ease-out forwards; 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Start with the content hidden */
+        transform: translateY(20px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1; /* End with full opacity */
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* Dim the image when scrolled */
+.custom-image-container img.dimmed {
+    filter: brightness(0.5); /
+}
+/* Custom Image Section (Clippy Image) */
+.custom-image-container {
+    position: relative;
+    width: 100%;
+    height: 900px; 
+    overflow: hidden; 
+    z-index: 0; 
+}
+
+.custom-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    clip-path: polygon(0 31%, 100% 0%, 100% 100%, 0 69%); 
+    transition: filter 0.3s ease-in-out; 
+}
+
+/* Content Section (Slider and Description) */
+.slider-wrapper, .company-description {
+    position: relative;
+    z-index: 1; 
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95); 
+    margin-top: -100px; 
+}
+
+/* Dimming the image when scrolled */
+.custom-image-container img.dimmed {
+    filter: brightness(0.5); 
+}
+
+.company-description {
+    margin-top: -100px; 
+}
+
+/* Slider Section */
+.slider-wrapper {
+    margin-top: 20px;
+}
+
+
+/* Content Section (Slider and Description) */
+.slider-wrapper, .company-description {
+    position: relative;
+    z-index: 1; 
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.95); 
+}
+
+/* Adjust margins so content flows over the image */
+.company-description {
+    margin-top: -50px; /* Adjust to make content overlap the image */
+}
+
+/* Slider Section */
+.slider-wrapper {
+    margin-top: 20px;
+}
+/* Content Section (Slider and Description) */
+.main-content {
+    position: relative;
+    z-index: 1; 
+    background: rgba(255, 255, 255, 0.95); 
+    padding: 20px;
+    margin-top: -50px; 
+}
+
+
+/* Slider Wrapper */
+.slider-wrapper {
+    padding: 1rem; 
+    position: relative;
+    z-index: 2;
+}
+
+/* Slider Wrapper */
+.slider-wrapper {
+    padding: 2rem; 
+    position: relative;
+    z-index: 2;
+}
+
+/* Slider Styling */
+.slider {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    gap: 1rem; 
+    scrollbar-width: none; 
+    width: 50%;
+}
+
+.slider::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, etc. */
+}
+
+.slider img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.slider img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Slider Navigation */
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Add spacing between navigation dots */
+    margin-top: 1rem;
+}
+
+/* Dots Styling */
+.slider-nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.slider-nav a:hover {
+    color: #fc4e03; /* Highlight color on hover */
+}
+
+/* Add the color dots between the slider navigation links */
+.slider-nav a {
+    display: inline-block;
+    width: 20px;  /* Larger size for the dots */
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff6f00; 
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s ease;
+}
+
+.slider-nav a:hover {
+    transform: scale(1.3);  /* Slight zoom effect on hover */
+    background-color: #000;  /* Change to black on hover */
+}
+
+.slider-nav a.active {
+    background-color: #000;  /* Active dot will be black */
+}
+
+
+/* Optional: Ensure the slider takes up remaining space */
+.slider-wrapper {
+    width: 65%; 
+}
+
+/* Product Grid */
+.images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 2rem;
+    background-color: #f5f5f5;
+}
+
+.product {
+    text-align: center;
+    color: #fff;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+.product a {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fc4e03;
+}
+
+
+/* Product Grid Animation */
+.product {
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease; 
+    transform: scale(0.9); 
+}
+
+.product img {
+    width: 350px; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease; 
+}
+
+.product img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #222; 
+    color: #fff; 
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer-branding h2 {
+    font-size: 2rem;
+    color: #fc4e03; /* Accent color */
+}
+
+.footer-branding p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #fc4e03; /* Accent color for links */
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #fff; /* Highlight on hover */
+}
+
+.footer-about p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-social .social-icon {
+    text-decoration: none;
+    color: #fc4e03; /* Accent color for icons */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-icon:hover {
+    color: #fff; /* Highlight on hover */
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reset specific to the login page */
+.login-wrapper * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 5rem); 
+    background-image: url('img/buynow.webp'); 
+    background-size: cover; 
+    background-position: center; 
+    position: relative; 
+    padding: 2rem;
+    z-index: 1;
+    clip-path: polygon(0 25%, 100% 0, 100% 75%, 0% 100%); /* Clippy effect for a wave-like shape */
+}
+/* Login Wrapper */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 5rem); /* Account for the header height */
+    background-color: #f5f5f5;
+    padding: 2rem; 
+}
+
+/* Login Container */
+.login-container {
+    max-width: 400px;
+    width: 100%;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading */
+.login-container h2 {
+    font-size: 2rem;
+    color: #fc4e03; /* Accent color */
+    margin-bottom: 1.5rem;
+}
+
+/* Form Labels */
+.login-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Form Inputs */
+.login-container input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.login-container input:focus {
+    border-color: #fc4e03;
+    outline: none;
+    box-shadow: 0 0 4px rgba(252, 78, 3, 0.3);
+}
+
+/* Social Buttons */
+.social-button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.social-button.google {
+    background-color: #db4437;
+    color: white;
+}
+
+.social-button.google:hover {
+    background-color: #c33b30;
+}
+
+.social-button.apple {
+    background-color: black;
+    color: white;
+}
+
+.social-button.apple:hover {
+    background-color: #333;
+}
+
+/* Login Button */
+.login-container .login-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #fc4e03;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container .login-button:hover {
+    background-color: #e03a00;
+}
+
+/* Policy Text */
+.policy-text {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* Bottom Links */
+.bottom-links p {
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 1rem;
+}
+
+.bottom-links a {
+    text-decoration: none;
+    color: #fc4e03;
+    font-weight: bold;
+}
+
+.bottom-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+.login-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    color: #fc4e03;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* preoduct page  */
+.product-page-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .contact-background-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 5rem); 
+    background-image: url('img/contact.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    position: relative; 
+    padding: 2rem;
+    z-index: 1;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); /* Clippy effect for a wave-like shape */  
+}
+
+  .product-page-container .product-images {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product-page-container .main-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-page-container .product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .product-page-container .product-details h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .product-page-container .price {
+    font-size: 1.5rem;
+    color: orange;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .product-page-container .add-to-cart {
+    background-color: orange;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+  }
+  
+  .product-page-container .add-to-cart:hover {
+    background-color: darkorange;
+  }
+  
+  .product-page-container .features {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .product-page-container .features p {
+    margin: 10px 0;
+    color: #555;
+  }
+  .product-description{
+    font-family: "Funnel Display", sans-serif;
+  }
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .product-page-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .product-page-container .product-images,
+    .product-page-container .product-details {
+      flex: 1;
+    }
+  
+    .product-page-container .main-image {
+      max-width: 80%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*contact section styling */
+  .contact-section {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.contact-heading h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.contact-info {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.contact-details {
+    list-style: none;
+    margin-top: 1rem;
+    padding: 0;
+}
+
+.contact-details li {
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.contact-form .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea,
+.contact-form .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form .submit-button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* About Page Styles */
+
+/* Ensure the About page has a separate container */
+.about-section {
+    padding: 4rem 2rem;
+    background: url('img/orange-6508617_1280.jpg') no-repeat center center / cover; 
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* About content container */
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Styling for the About section heading */
+.about-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Paragraph styling */
+.about-container p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Styling for the quote block */
+.quote blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #333;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 600px;
+    border-left: 5px solid #fc4e03;
+    background-color: orange;
+    font-weight: bold;
+}
